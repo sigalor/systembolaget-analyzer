@@ -66,7 +66,7 @@ for store_id in stores.keys():
     worksheet.set_column(col_no, col_no, width)
 
   worksheet.write(0, 0, ", ".join(stores[store_id]), heading)
-  for col_no, head_str in enumerate(["Product ID", "Product number", "Type (1)", "Type (2)", "Product name", "Price per liter per percent alcohol (Kr.)", "Price (Kr.)", "Alcohol percentage", "Volume (ml)"]):
+  for col_no, head_str in enumerate(["Product ID", "Product number", "Type (1)", "Type (2)", "Product name", "Price per liter per percent alcohol (SEK)", "Price (SEK)", "Alcohol percentage", "Volume (ml)"]):
     worksheet.write(2, col_no, head_str, bold)
 
   for row_no, p in enumerate(products):
