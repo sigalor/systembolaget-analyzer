@@ -54,7 +54,9 @@ def add_products(new_products):
       f.write(json.dumps(products, separators=(',', ':')))
 
 
-homepage = requests.get("https://www.systembolaget.se").text
+homepage = requests.get("https://www.systembolaget.se",
+                        headers={"User-Agent": "xxx"}).text  # need to use different User-Agent to prevent 403 error
+print(homepage)
 settings_url = re.search(
     '(?<=\<script rel\="preload" src\=")(https\:\/\/cdn\.systembolaget\.se\/appsettings\.[a-z0-9-]+\.js)', homepage).group(0)
 settings = json.loads(requests.get(settings_url).text[35:-1])
