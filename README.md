@@ -11,3 +11,7 @@ Interested in analyzing the inventory of your local Systembolaget, the national 
 Currently, only the file `cheapest-drinks.xlsx` is written out, where the most important column is "Price per liters and per percent alcohol". With this, you can easily find the cheapest drink in each category.
 
 Also have a look at the JSON files in the `products` directory, as the API actually provides much more information about each product.
+
+## License
+
+MIT
